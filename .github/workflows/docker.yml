@@ -8,6 +8,7 @@ jobs:
     name: Build the docker image and push it on Docker Hub
     runs-on: ubuntu-latest
     steps:
+      - run: ls
       - run: cd docker
       - run: docker build . -t app
       - run: docker push qkjlu/tp_devops
