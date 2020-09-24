@@ -4,14 +4,10 @@ name: docker-automation
 on: push
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
   docker-build-push:
     name: Build the docker image and push it on Docker Hub
     runs-on: ubuntu-latest
-
     steps:
-      - name: Build image
-        run: cd docker; docker build . -t app
-      - name: Push image to Docker Hub
-        run: docker push qkjlu/tp_devops
+      - run: cd docker
+      - run: docker build . -t app
+      - run: docker push qkjlu/tp_devops
