@@ -1,0 +1,14 @@
+version: "3"
+services:
+  db:
+    container_name: "db"
+    image: "postgres"
+  app:
+    image: "app"
+    container_name: "app"
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_DB: "db/tp_devops"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "foo123"
