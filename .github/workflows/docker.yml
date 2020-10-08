@@ -30,4 +30,4 @@ jobs:
           tags: qkjlu/tp_devops:latest
       -
         name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+        run: echo ${{ steps.docker_build.outputs.digest }} 
