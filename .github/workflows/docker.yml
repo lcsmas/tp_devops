@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:  
+      - name: Browse to dockerfile folder
+        run: cd docker
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
