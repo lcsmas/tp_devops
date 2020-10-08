@@ -4,8 +4,6 @@ name: docker-automation
 on: push
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
   docker-build-push:
     name: Build the docker image and push it on Docker Hub
     runs-on: ubuntu-latest
@@ -33,4 +31,3 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-
