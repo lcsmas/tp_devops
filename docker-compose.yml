@@ -3,6 +3,11 @@ services:
   db:
     container_name: "db"
     image: "postgres"
+    environment:
+      POSTGRES_DB: "tp_devops"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "foo123"
+
   app:
     image: "app"
     container_name: "app"
@@ -12,3 +17,4 @@ services:
       POSTGRES_DB: "db/tp_devops"
       POSTGRES_USER: "admin"
       POSTGRES_PASSWORD: "foo123"
+
