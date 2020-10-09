@@ -10,7 +10,7 @@ jobs:
 
     steps:  
       - name: Browse to dockerfile folder
-        run: cd docker
+        run: cd docker 
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
